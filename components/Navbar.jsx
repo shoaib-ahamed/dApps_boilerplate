@@ -79,7 +79,7 @@ const Navbar = () => {
     </>
        : 
        <button onClick={connectWallet}>
-       <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
+       <li className="bg-[#2952e3] mt-5 py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
        Login
      </li>
      </button> 

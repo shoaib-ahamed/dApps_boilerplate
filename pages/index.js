@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useMoralis } from 'react-moralis'
-import { Footer, Navbar, Services, Welcome } from '../components'
+import { Navbar, Welcome } from '../components'
 
 
 export default function Home() {
@@ -20,8 +20,8 @@ export default function Home() {
         <Navbar/>
         <Welcome/>
       </div>
-      <Services/>
-      <Footer/>
+      {/* <Services/>
+      <Footer/> */}
     </div>     
 
     </div>
