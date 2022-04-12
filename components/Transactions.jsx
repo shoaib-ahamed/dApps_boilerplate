@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useMoralisWeb3Api } from 'react-moralis'
 
@@ -19,22 +18,26 @@ const Transactions = ({user}) => {
       }
   }
 
-  console.log(transactions)
-
+ 
   useEffect(() => {
     fetchTransactions()
   }, []) 
 
+
+  console.log(transactions)
+
   if(transactions){
     return (
       <div>
-        {transactions && transactions.map((transaction , i) => {
-          <div key={transaction.hash}>
-            {i}.  <Link href={`${baseUrl}${transaction.hash}`}> {transaction.hash}</Link>
+        {transactions && transactions.map(transaction => 
+          <div className="text-[8px] md:text-md"key={transaction.hash}>
+            <a href={`${baseUrl}${transaction.hash}`}>  
+              <p >{transaction.hash}</p>
+            </a>
           </div>
-        })}
-
-        {/* {transactions[0].hash} */}
+        )}
+        {/* hash : {transactions[0].hash} <br/>
+        gas : {transactions[0].gas} */}
       </div>
     )
   }
