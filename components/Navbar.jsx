@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import { useMoralis } from 'react-moralis'
+import { DataContext } from '../store/GlobalState'
 
 
 
@@ -16,9 +17,12 @@ const Navbar = () => {
 
   const { isAuthenticated , authenticate , user , logout} = useMoralis()
 
+  const [state , dispatch] = useContext(DataContext)
+
   const connectWallet = (e) => {
     e.preventDefault();
     authenticate({})
+    dispatch({type: 'NOTIFY' , payload: {success: 'thankyou for login'}})
   }
 
   const disconnectWallet = (e) => {

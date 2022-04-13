@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { useMoralisWeb3Api } from 'react-moralis'
+import React, { useEffect, useState } from 'react';
+import { SiEthereum } from "react-icons/si";
+import { useMoralisWeb3Api } from 'react-moralis';
 
 const Transactions = ({user}) => {
   const Web3Api = useMoralisWeb3Api()
@@ -24,20 +25,19 @@ const Transactions = ({user}) => {
   }, []) 
 
 
-  console.log(transactions)
-
   if(transactions){
     return (
       <div>
         {transactions && transactions.map(transaction => 
-          <div className="text-[8px] md:text-md"key={transaction.hash}>
-            <a href={`${baseUrl}${transaction.hash}`}>  
-              <p >{transaction.hash}</p>
+          <div className="text-[8px] md:text-[12px] lg:text-[16px]" key={transaction.hash}>
+            <a  href={`${baseUrl}${transaction.hash}`} rel="noopener noreferrer" target="_blank"> 
+              <div className="flex items-center hover:text-blue-300">
+                <SiEthereum fontSize={15} color="fff"/> 
+                {transaction.hash}
+              </div>
             </a>
           </div>
         )}
-        {/* hash : {transactions[0].hash} <br/>
-        gas : {transactions[0].gas} */}
       </div>
     )
   }

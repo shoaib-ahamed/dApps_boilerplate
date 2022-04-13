@@ -4,8 +4,6 @@ import { useMoralis } from 'react-moralis'
 const Profile = ({user}) => {
    const [userName , setUserName] = useState('')
 
-   console.log(user)
-
    const {setUserData , isUserUpdating} = useMoralis()
 
    const handleChangeInput = (e) => {
@@ -25,7 +23,7 @@ const Profile = ({user}) => {
     <div>
         <div>
         <p className="text-dark font-semibold text-sm mt-1">Username : {user.getUsername()} </p>
-        <p className="text-dark font-semibold text-sm mt-1">Address : {user.get('ethAddress')} </p>
+        <p className="text-dark font-semibold text-[8px] md:text-[12px] lg:text-[16px] mt-1">Address : {user.get('ethAddress')} </p>
         </div>
         <div>
             <form onSubmit={handleSubmit} className="grid justify-between mt-2">
