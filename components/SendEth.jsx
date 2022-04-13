@@ -1,32 +1,14 @@
 import Moralis from 'moralis'
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { useWeb3Transfer } from 'react-moralis'
-import { DataContext } from '../store/GlobalState'
-import Loader from './Loader'
 
 const inputBox = `className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism`
 
 
-const toast = (
-    <div className="text-5xl text-white bg-yellow-500 top-4 right-6">
-        i am transaction
-    </div>
-)
-
-
-
-
 const SendEth = () => {
-
     const initialState = { receiver: '', amount: 0.2 }
     const [info, setInfo] = useState(initialState)
     const { receiver, amount} = info
-    const [loading, setLoading] = useState(false)
-
-    const [state , dispatch] = useContext(DataContext)
-
-  
-
 
     const handleChangeInput = e => {
         const {name, value} = e.target
@@ -41,18 +23,14 @@ const SendEth = () => {
 
     const handleSubmit = async e => {
         e.preventDefault()
-        console.log('is it working')
         await Moralis.enableWeb3()
-        console.log('is it working after enableWeb3')
         console.log('receiver : ' , receiver)
         fetch({
             onSuccess: () => {
-                setLoading(false)
                 console.log('success')
             },
             onError: (error) => {
                 console.log(error)
-                dispatch({type: 'NOTIFY' , payload: {error: error}})
             }
         }) 
     }
@@ -72,10 +50,7 @@ const SendEth = () => {
                 </div>
 
                 <div className="h-[1px] w-full bg-gray-400 my-2" />
-
-                {(loading)
-              ? <Loader />
-              : (
+               
                 <button
                   type="submit"
                   disabled={isFetching}
@@ -83,7 +58,7 @@ const SendEth = () => {
                 >
                   Send now
                 </button>
-              )} 
+           
           
             </form>
 

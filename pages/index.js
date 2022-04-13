@@ -15,13 +15,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen"> 
+      <div className="min-h-full	"> 
       <div className="gradient-bg-welcome">
         <Navbar/>
         <Welcome/>
       </div>
-      {/* <Services/>
-      <Footer/> */}
     </div>     
 
     </div>

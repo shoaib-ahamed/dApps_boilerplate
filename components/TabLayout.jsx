@@ -97,7 +97,7 @@ const Tabs = ({ color , user}) => {
 export default function TabLayout({user}) {
   return (
     <>
-      return <Tabs color="pink" user={user}/>;
+      return <Tabs color="yellow" user={user}/>;
     </>
   );
 }
