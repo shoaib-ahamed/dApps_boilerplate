@@ -6,7 +6,7 @@ const inputBox = `className="my-2 w-full rounded-sm p-2 outline-none bg-transpar
 
 
 const SendEth = () => {
-    const initialState = { receiver: '', amount: 0.2 }
+    const initialState = { receiver: '', amount: 0 }
     const [info, setInfo] = useState(initialState)
     const { receiver, amount} = info
 
@@ -16,7 +16,7 @@ const SendEth = () => {
     }
 
     const {fetch , isFetching} = useWeb3Transfer({
-        amount: Moralis.Units.ETH("0.004"),
+        amount: Moralis.Units.ETH(amount),
         receiver: receiver,
         type: "native"
     })

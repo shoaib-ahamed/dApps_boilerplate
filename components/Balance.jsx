@@ -24,7 +24,7 @@ const Balance = ({user}) => {
         fetchNativeBalance()
         fetchERC20Balances({
             params: {
-                chain: 'ropsten',
+                chain: 'rinkeby',
                 address: user.get('ethAddress') 
             }
         })
