@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { SiEthereum } from "react-icons/si";
 import { useMoralisWeb3Api } from 'react-moralis';
@@ -29,7 +30,7 @@ const Transactions = ({user}) => {
     return (
       <div>
         {transactions && transactions.map(transaction => 
-          <div className="text-[8px] md:text-[12px] lg:text-[13px]" key={transaction.hash}>
+          <div className="text-[7px] md:text-sm lg:text-[13px]" key={transaction.hash}>
             <a  href={`${baseUrl}${transaction.hash}`} rel="noopener noreferrer" target="_blank"> 
               <div className="flex items-center hover:text-blue-300">
                 <SiEthereum fontSize={15} color="fff"/> 
