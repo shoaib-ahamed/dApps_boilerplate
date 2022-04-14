@@ -20,7 +20,7 @@ const Profile = ({user}) => {
    }
 
   return (
-    <div >
+    <div className="w-full">
         <div>
             <p className="text-dark font-bold text-sm mt-1">Username : {user.getUsername()} </p>
             <p className="text-dark font-semibold text-[8px] md:text-[12px] lg:text-[16px] mt-1">Address : {user.get('ethAddress')} </p>
