@@ -20,10 +20,10 @@ const Profile = ({user}) => {
    }
 
   return (
-    <div>
+    <div >
         <div>
-        <p className="text-dark font-semibold text-sm mt-1">Username : {user.getUsername()} </p>
-        <p className="text-dark font-semibold text-[8px] md:text-[12px] lg:text-[16px] mt-1">Address : {user.get('ethAddress')} </p>
+            <p className="text-dark font-bold text-sm mt-1">Username : {user.getUsername()} </p>
+            <p className="text-dark font-semibold text-[8px] md:text-[12px] lg:text-[16px] mt-1">Address : {user.get('ethAddress')} </p>
         </div>
         <div>
             <form onSubmit={handleSubmit} className="grid justify-between mt-2">
