@@ -36,7 +36,7 @@ const SendEth = () => {
     }
 
   return (
-    <div className="flex flex-col justify-start items-center p-5 w-[300px] md:w-[360px] lg:w-full blue-glassmorphism">
+    <div className="flex flex-col justify-start items-center p-5 w-[300px] md:w-8 lg:w-full blue-glassmorphism">
             <form className="mx-auto my-4" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label className="text-white" htmlFor="name">Receiver</label>

@@ -2,6 +2,7 @@ import React from 'react';
 import { BsInfoCircle } from "react-icons/bs";
 import { SiEthereum } from "react-icons/si";
 import { useMoralis } from 'react-moralis';
+import SendDonation from './SendDonation';
 import SendEth from './SendEth';
 import TabLayout from './TabLayout';
 
@@ -24,7 +25,7 @@ const Welcome = () => {
 
   return (
     <div className="flex w-full min-h-screen justify-center items-center">
-      <div className="flex md:gap-3 lg:flex-row flex-col items-start justify-between lg:mt-0 md:mt-10 py-12 px-4 lg:px-16">
+      <div className="flex md:gap-3 lg:flex-row flex-col items-start justify-between lg:mt-0 md:mt-10 py-6 px-4 lg:px-12">
 
         <div className="flex flex-1 gap-3 justify-start flex-col">
           <h1 className="text-3xl sm:text-5xl text-white text-gradient  py-1 ">Send Crypto <br/> across the world. </h1>
@@ -63,7 +64,7 @@ const Welcome = () => {
             <div className="flex justify-between flex-col w-full h-full">
                <div className="flex justify-between items-start ">
                   <div className="w-10 h-10 rounded-full border-2 border-white hover:border-black flex justify-center items-center">
-                    <SiEthereum fontSize={21} className="hover:text-[26px] text-white hover:text-black"/>
+                    <SiEthereum fontSize={21} className="hover:text-[28px] text-white hover:text-black"/>
                   </div>
                   <BsInfoCircle fontSize={17} color="fff"/>
                </div>
@@ -77,6 +78,8 @@ const Welcome = () => {
           </div>
 
           <SendEth/>
+
+          <SendDonation/>
 
         </div>
       </div>
