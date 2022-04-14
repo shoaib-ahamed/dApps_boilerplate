@@ -23,10 +23,10 @@ const Welcome = () => {
   
 
   return (
-    <div className="flex w-full h-screen justify-center items-center">
-      <div className="flex gap-0 md:gap-20 lg:flex-row flex-col items-start justify-between md:p-2 py-12 md:py-12 px-4">
+    <div className="flex w-full min-h-screen justify-center items-center">
+      <div className="flex md:gap-3 lg:flex-row flex-col items-start justify-between lg:mt-0 md:mt-10 py-12 px-16">
 
-        <div className="flex flex-1 justify-start flex-col">
+        <div className="flex flex-1 gap-3 justify-start flex-col">
           <h1 className="text-3xl sm:text-5xl text-white text-gradient  py-1 ">Send Crypto <br/> across the world. </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
             Explore the crypto world. Buy and sell cryptocurrencies easily on Krypto.
@@ -58,8 +58,8 @@ const Welcome = () => {
           </div>
         </div>
 
-        <div className="flex flex-col flex-1 items-center justify-start w-full md:mt-0 mt-0">
-          <div className="p-3 justify-end items-start flex-col rounded-xl h-40 w-72 md:w-full  my-5 eth-card white-glassmorpism">
+        <div className="flex flex-col gap-3 flex-1 items-center justify-start w-full">
+          <div className="p-3 justify-end items-start flex-col rounded-xl h-40 w-72 md:w-80  my-5 eth-card white-glassmorpism">
             <div className="flex justify-between flex-col w-full h-full">
                <div className="flex justify-between items-start ">
                   <div className="w-10 h-10 rounded-full border-2 border-white hover:border-black flex justify-center items-center">
